@@ -1,0 +1,40 @@
+using System;
+namespace ConsoleApp5
+{
+    class Emp
+    {
+         string name="Amit Kumar";
+         int AnulaSalary=15000;
+        int id = 1;
+   
+        private  void getMonthlsalary()
+        {
+            int month = this.AnulaSalary / 12;
+            Console.WriteLine(month);
+        }
+       
+        public  void showEmployeeDEtail()
+        {
+            this.getMonthlsalary();
+        }
+
+
+
+    }
+     class animal:Emp
+    {
+
+    }
+
+
+   class Program
+    {
+        static void Main(string[] args)
+        {
+            Emp obj1 = new Emp();
+            obj1.showEmployeeDEtail();
+
+
+        }
+    }
+}

@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp1
+{
+   class Employee1
+    {
+        private string name;
+         public  string Aname
+        {
+            set {
+
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("Plz Enter a valid name !");
+                }
+                else
+                {
+                    this.name = value;
+                }
+            }
+            get
+            {
+                return this.name;
+            } 
+
+        }
+         
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee1 obj1 = new Employee1();
+            obj1.Aname ="amit Kumar";
+            Console.WriteLine("Name {0}", obj1.Aname);
+            Console.ReadLine();
+
+        }
+    }
+}

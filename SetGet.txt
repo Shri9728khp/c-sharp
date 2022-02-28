@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GetSet
+{
+    internal class Program
+    {
+        class Student
+        {
+            protected int rollno;
+            protected string name;
+            protected string subject;
+
+            public int getroll
+            {
+                set
+                {
+                    if (value >= 1 && value<=1000)
+                    {
+                        rollno = value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("plz input rollno in range carefully");
+                    }
+                }
+                get
+                {
+                    return rollno;
+                }
+
+            }
+            public string getname
+            {
+                set
+                {
+                    if (string.IsNullOrWhiteSpace(value))
+                        throw new ArgumentNullException();
+                        name = value;
+                    
+                }
+                get
+                {
+                    return name;
+                }
+            }
+            public string getsubject
+            {
+                set
+                {
+                    if (string.IsNullOrWhiteSpace(value))
+                        throw new ArgumentNullException();
+                    subject = value;
+
+                }
+                get
+                {
+                    return subject;
+                }
+            }
+        }
+        public static void Main(string[] args)
+        {
+            Student st = new Student();
+            Console.WriteLine("Enter student rollno between 1 to 1000:");
+            st.getroll =int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter student name :");
+            st.getname =Console.ReadLine();
+            Console.WriteLine("Enter student subject :");
+            st.getsubject = Console.ReadLine();
+
+            Console.WriteLine("Student roll no is :" + st.getroll);
+            Console.WriteLine("student name is :" + st.getname);
+            Console.WriteLine("student subject is :" + st.getsubject);
+            Console.ReadLine();
+        }
+    }
+}

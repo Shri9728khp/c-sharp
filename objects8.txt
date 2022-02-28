@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp1
+{    class Employee
+    {
+        int accountbal = 2000;
+
+
+      
+
+
+        public int bal
+        {
+           set {
+                if (value < 0)
+                {
+                    Console.WriteLine("Not set value !");
+                }
+                else
+                {
+                    this.accountbal = value;
+                }
+            } 
+            get
+            {
+
+                return accountbal;
+            } 
+        }
+      
+      
+       
+
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Employee obj1 = new Employee();
+            obj1.bal =6000;
+
+            Console.WriteLine(obj1.bal);
+
+            Console.ReadLine();
+
+        }
+    }
+}

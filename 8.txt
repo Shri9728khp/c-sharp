@@ -1,0 +1,26 @@
+// let mobile={name:'Samsung', price:12000, color:'blue'}
+const Employee=[{name:'Amit Kumar',  AnulaSalary:6000},
+{name:'Sumit Kumar',  AnulaSalary:160000},
+{name:'Sourav Kumar',  AnulaSalary:180000},
+{name:'Aamar Kumar',  AnulaSalary:200000},
+{name:'Arzoo Kumar',  AnulaSalary:880000}]
+
+
+function getmoth(){
+    
+    var sal=this.AnulaSalary/12;
+    return sal;
+}
+
+
+function loadData(){
+let  tbl="<table border='1' width='600'><tr><th>Name</th><th>Anual Salary</th><th>MonthalySalary</th></tr>"
+
+Employee.forEach(function(getvalue){
+    var month=getmoth.call(getvalue)
+   tbl+=`<tr><th> ${getvalue.name} </th>  <th> ${getvalue.AnulaSalary} </th><th>${month}`
+
+})
+document.getElementById("msg").innerHTML=tbl;
+
+}

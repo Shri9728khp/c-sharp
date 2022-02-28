@@ -1,0 +1,85 @@
+/* Get & Set BankAccount Withdraw & Deposite Program With Validation */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    public class BankAccount
+    {
+        private string Owner;
+        private int balance;
+
+        public void BankAcc(string owner, int ball)
+        {
+            this.Owner = owner;
+            this.balance = ball;
+        }
+
+        public string owner
+        {
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("Can't Enter The Null or Empty Name");
+                }
+                else
+                {
+                    this.Owner = value;
+                }
+            }
+            get
+            {
+                return this.Owner;
+            }
+        }
+
+        public void deposit(int amount)
+        {
+            balance += amount;
+        }
+
+        public void withdraw(int amount)
+        {
+            balance -= amount;
+        }
+        public string toString()
+        {
+            return Owner + "s Acc Hold " + balance;
+
+        }
+
+        public int bal
+        {
+            set
+            {
+                if (value > balance )
+                {
+                    Console.WriteLine("Can't Withdraw ");
+                }
+                else
+                {
+                    withdraw(value);
+                }
+            }
+            
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            BankAccount obj = new BankAccount();
+            obj.BankAcc("Nitin", 5000);
+            obj.deposit(1000);
+            obj.owner = "Nitin";
+            obj.bal = 7000;
+            var data = obj.toString();
+            Console.WriteLine(data);
+        }
+    }
+}

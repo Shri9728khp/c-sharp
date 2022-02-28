@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp1
+{
+    class BankAccount
+    {
+        string owner;
+        int ballence;
+        public BankAccount(string owner, int bal)
+        {
+            this.owner = owner;
+            this.ballence = bal;
+        }
+
+        public  int Ball
+        {
+            get { return this.ballence; }
+        }
+
+        public  void Deposit(int amount)
+        {
+            this.ballence += amount;
+
+        }
+
+        public void withdraw(int amount)
+        {
+            this.ballence -= amount;
+
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            BankAccount obj1 = new BankAccount("Amit Kumar", 2000);
+            obj1.Deposit(500);
+            obj1.withdraw(200);
+            obj1.Deposit(5000);
+            Console.WriteLine(obj1.Ball);
+
+
+            Console.ReadLine();
+
+        }
+    }
+}

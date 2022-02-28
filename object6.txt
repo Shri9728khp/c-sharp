@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp2
+{
+
+    class Employee
+    {
+        public string name;
+        public int age;
+        public string Department;
+        public Employee(string name, int age, string department)
+        {
+            this.name = name;
+            this.age = age;
+            this.Department = department;
+            Console.WriteLine("Welcome to Chetu India");
+        }
+    }
+
+    class fullTimeEmployee : Employee
+    {
+        public fullTimeEmployee(string name, int age, string depart) :base("Amit", 34, "php")
+        {
+            Console.WriteLine("wlcome to ...... Noida");
+       }
+
+
+          public  void getDetail()
+        {
+
+
+
+           /*  Console.WriteLine("Name : {0} Age {1} : Depart {2}", this.name, this.age, this.Department); */
+        }
+
+    }
+        class Program
+        {
+
+            static void Main(string[] args)
+            {
+
+            Employee obj1 = new Employee("Amit Kumar", 23, "php dev");
+       
+
+            
+        
+            Console.ReadLine();
+
+            }
+
+        }
+    }
+  

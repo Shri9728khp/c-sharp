@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp1
+{
+    class Employee1
+    {
+        public string firstname { get; private set; }
+        public string lastname { get; private  set; }
+        public Employee1(string n, string l)
+        {
+            this.firstname = n;
+            this.lastname = l;
+
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee1 obj1 = new Employee1("Amit", "Kumar");
+           
+                Console.WriteLine("Name {0}  LastName {1}", obj1.firstname, obj1.lastname);
+         
+
+
+            Console.ReadLine();
+
+        }
+    }
+}

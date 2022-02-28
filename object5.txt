@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp2
+{
+
+    class Employee
+        {
+        public string name;
+        public int age;
+        public string Department;
+
+  
+        } 
+
+    class fullTimeEmployee: Employee
+    {
+          public  void getDetail()
+        {
+            Console.WriteLine("Name : {0} Age {1} : Depart {2}", this.name, this.age, this.Department);
+        }
+
+    }
+
+
+
+
+
+
+
+
+        class Program
+        {
+
+            static void Main(string[] args)
+            {
+
+            fullTimeEmployee obj1 = new fullTimeEmployee();
+
+            obj1.name = "Amit Kumar";
+            obj1.age =40;
+            obj1.Department = "Php developer";
+            obj1.getDetail();
+            Console.ReadLine();
+
+            }
+
+        }
+    }
+  

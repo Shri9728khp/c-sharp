@@ -1,0 +1,39 @@
+// let mobile={name:'Samsung', price:12000, color:'blue'}
+const Employee=[{cname:'samsung', price:6000, pname:'mobile'},
+{cname:'samsung',  price:300, pname:'mobile'},
+{cname:'nokia',  price:3000,pname:'mobile'},
+{cname:'Redmi',  price:600,pname:'mobile'},
+{cname:'Mac',  price:600, pname:'mobile'},
+{cname:'Vivo',  price:7000, pname:'mobile'},
+{cname:'Panasonic',  price:880,pname:'mobile'},
+{cname:'Realmi', price:1000,pname:'mobile'},
+
+{cname:'samsung',  price:300, pname:'Laptop'},
+{cname:'nokia',  price:3000,pname:'Laptop'},
+{cname:'Redmi',  price:600,pname:'Laptop'},
+{cname:'Mac',  price:600, pname:'Laptop'},
+{cname:'Vivo',  price:7000, pname:'mobile'},
+{cname:'Panasonic',  price:880,pname:'Laptop'},
+{cname:'Realmi', price:1000,pname:'Laptop'},
+
+{cname:'Mac',  price:600, pname:'tv'},
+{cname:'Vivo',  price:7000, pname:'tv'},
+{cname:'Panasonic',  price:880,pname:'tv'},
+{cname:'Realmi', price:1000,pname:'tv'},
+]
+function loadData(){
+let  tbl="<table border='1' width='500'><tr><th>Name</th></th><th>Price</tr>"
+var x=document.getElementById("search").value;
+
+var filterdata=Employee.filter(function(mydata){
+    return  mydata.price > x;   
+})
+
+filterdata.forEach(function(getvalue){
+
+   tbl+=`<tr><th> ${getvalue.cname} </th>  <th> ${getvalue.price} </th><th>${getvalue.pname}`
+
+})
+document.getElementById("msg").innerHTML=tbl;
+
+}

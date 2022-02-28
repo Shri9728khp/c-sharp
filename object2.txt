@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp2
+{
+
+    class Mycar
+    {
+        public string name;
+        public int price;
+        public string modal;
+
+            public  void   getDetail(){
+            Console.WriteLine("Name :{0}   Price : {1}   Modal : {2}",this.name, this.price, this.modal);
+
+        }
+
+          }
+    
+    class Program
+    {
+  
+      static void Main(string[] args)
+        {
+
+
+            Mycar car = new Mycar();          
+            car.name = "BMW";
+            car.price = 2324;
+            car.modal = "122www";
+            Mycar car1 = new Mycar();
+            car1.name = "Honda";
+            car1.price = 23;
+            car1.modal = "wwere";
+            car.getDetail();
+            car1.getDetail();
+
+
+          
+            Console.ReadLine();
+
+        }
+
+        }
+    }

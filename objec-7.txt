@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp1
+{    class Employee
+    {
+        int salary;
+        string name;
+        int phone;
+        string department;
+       public  void setData(int sal, string name, int phone, string department)
+        {
+            this.salary = sal;
+            this.name = name;
+            this.phone = phone;
+            this.department = department;
+
+
+        }
+        public void getData()
+        {
+            Console.WriteLine("Slary : {0}  Name {1}   phone {2}  department {3}", this.salary, this.name, this.phone, this.department);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Employee obj1 = new Employee();
+            Employee obj2 = new Employee();
+            obj1.setData(12000, "Amit Kumar", 587, "Java developer");
+            obj1.getData();
+
+            obj2.setData(12000, "Amit Kumar", 587, "Java developer");
+            obj2.getData();
+
+            Console.ReadLine();
+
+        }
+    }
+}

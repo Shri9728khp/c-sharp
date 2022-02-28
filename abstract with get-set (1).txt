@@ -1,0 +1,141 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp14
+
+{
+    abstract class persion
+    {
+        protected string name;
+        protected int age;
+        protected int id;
+        public abstract void getDetail(string nam, int age, int id);
+        public string cheakName
+        {
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("invalid name");
+                }
+                else
+                {
+                    this.name = value;
+                }
+            }
+         }
+        public int cheakAge
+        {
+            get
+            {
+                return this.age;
+
+            }
+            set
+            {
+                if (age < 18)
+                {
+                    Console.WriteLine("  your age is less then  18");
+                }
+                else
+                {
+                    this.age = value;
+                }
+            }
+        }
+        public int cheakId
+        {
+            get
+            {
+                return this.id;
+            }
+            set
+            {
+                if (id == 0)
+                {
+                    Console.WriteLine("invalid id");
+                }
+                else
+                {
+                    this.id = value;
+                }
+            }
+
+        }
+        public string show()
+        {
+            return "name :" + this.name + "\n " + "age :  " + this.age + " \n   " + "id : " + this.id;
+        }
+     }
+    class teacher : persion
+    {
+        public int slary = 500;
+        public override void getDetail(string name, int age, int id)
+
+        {
+            this.name = name;
+            this.age = age;
+            this.id = id;
+
+            Console.WriteLine("Teacher Information............");
+           }
+
+     }
+
+      class student : persion
+    {
+        public int roll = 1234;
+        public override void getDetail(string nam, int age, int id)
+        {
+
+            this.name = nam;
+            this.age = age;
+            this.id = id;
+            Console.WriteLine("Student Information............");
+         
+
+        }
+
+    }
+    class program
+    {
+        public static void Main(string[] args)
+        {
+            teacher obj = new teacher();
+
+            student obj1 = new student();
+            obj.getDetail("shakir sir ", 30, 55);
+            obj.cheakName = "shakir sir";
+            obj.cheakAge = 30;
+            obj.cheakId = 55;
+            obj.show();
+
+
+            var data = obj.show();
+            Console.WriteLine(data);
+            Console.WriteLine("salary : {0}", obj.slary);
+
+
+
+            obj1.getDetail("Ashkeen",20, 113);
+
+            obj1.cheakName = "Ashkeen";
+            obj1.cheakAge = 20;
+            obj1.cheakId = 113;
+            obj1.show();
+
+            var data1 = obj.show();
+            Console.WriteLine(data1);
+            Console.WriteLine("roll : {0} ", obj1.roll);
+
+        }
+    
+}
+}

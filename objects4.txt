@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp2
+{
+
+    class Mycar
+    {
+        public string name;
+        public int price;
+        public string modal;
+        public static string wheel = "jktyres";
+
+        public Mycar(string name, int price, string modal)
+        {
+            this.name = name;
+            this.price = price;
+            this.modal = modal;
+
+            Console.WriteLine("Name :{0}   Price : {1}   Modal : {2} {3}", this.name, this.price, this.modal, wheel);
+
+        }
+
+        /* public  void   getDetail(){
+             Console.WriteLine("Name :{0}   Price : {1}   Modal : {2} {3}",this.name,this.price,this.modal, wheel); */
+
+        } 
+
+        class Program
+        {
+
+            static void Main(string[] args)
+            {
+            Console.WriteLine("Enter name !");
+            string n = Console.ReadLine();
+            Console.WriteLine("Enter price !");
+            int p = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Modal !");
+            string m = Console.ReadLine();
+            Mycar car = new Mycar(n, p, m);
+          
+                Console.ReadLine();
+
+            }
+
+        }
+    }
+  
